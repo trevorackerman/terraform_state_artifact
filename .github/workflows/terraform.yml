@@ -13,7 +13,7 @@ jobs:
     name: Using terraform_state_artifact action
     steps:
       - id: terrafrom_state_artifact
-        uses: sturlabragason/terraform_state_artifact@v1
+        uses: trevorackerman/terraform_state_artifact@v1
         with:
           encryptionkey: ${{ secrets.pat }}
         env:
@@ -23,7 +23,7 @@ jobs:
     name: Using terraform_state_artifact action without apply
     steps:
       - id: terraform_apply_false
-        uses: sturlabragason/terraform_state_artifact@v1
+        uses: trevorackerman/terraform_state_artifact@v1
         with:
           encryptionkey: ${{ secrets.pat }}
           apply: false
@@ -34,7 +34,7 @@ jobs:
     name: Using terraform_state_artifact with custom plan flag
     steps:
       - id: terraform_plan_custom
-        uses: sturlabragason/terraform_state_artifact@v1
+        uses: trevorackerman/terraform_state_artifact@v1
         with:
           encryptionkey: ${{ secrets.pat }}
           apply: false
@@ -46,7 +46,7 @@ jobs:
     name: Using terraform_state_artifact with custom apply flag
     steps:
       - id: terraform_apply_custom
-        uses: sturlabragason/terraform_state_artifact@v1
+        uses: trevorackerman/terraform_state_artifact@v1
         with:
           encryptionkey: ${{ secrets.pat }}
           custom_apply_flags: '-no-color'
